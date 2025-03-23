@@ -1,4 +1,4 @@
-const educationData = {
+export const educationData = {
   cs: {
     title: "Computer Science",
     date: "Jan 2025 | Ben Guerir",
@@ -17,18 +17,8 @@ const educationData = {
   }
 };
 
-const experienceData = {
+export const experienceData = {
   cpp: {
-    title: "Software Engineer (Bootcamp) at GoQuant",
-    date: "Feb 2025 | 4 Weeks",
-    details: [
-      "Built low-latency trading algorithms in C++ using multithreading for optimal performance.",
-      "Contributed to company projects by developing scalable, real-time trading solutions.",
-      "Collaborated in a team environment to deliver high-performance systems.",
-      "Gained hands-on experience with financial markets and algorithmic trading strategies."
-    ]
-  },
-  "low-latency": {
     title: "Software Engineer (Bootcamp) at GoQuant",
     date: "Feb 2025 | 4 Weeks",
     details: [
@@ -68,7 +58,7 @@ const experienceData = {
   }
 };
 
-const skillData = {
+export const skillsData = {
   "web-dev": "Web Development",
   "problem-solving": "Problem Solving",
   python: "Python Programming",
@@ -80,7 +70,7 @@ const skillData = {
   cad: "CAD Design"
 };
 
-const projectData = {
+export const projectData = {
   urajs: {
     title: "Frontend Framework (UraJS)",
     description: "Developed custom JavaScript/TypeScript framework inspired by ReactJS and NextJS. Implemented real-time rendering. Created Dockerfile and Nginx config generation for easy deployment.",
@@ -132,115 +122,3 @@ const projectData = {
     technologies: ["C"]
   }
 };
-
-const projectsForm = document.getElementById('projects-form');
-Object.entries(projectData).forEach(([key, project]) => {
-  const label = document.createElement('label');
-  const input = document.createElement('input');
-  input.type = 'checkbox';
-  input.name = 'technology';
-  input.value = key;
-  const text = document.createTextNode(project.title);
-  label.appendChild(input);
-  label.appendChild(text);
-  projectsForm.appendChild(label);
-});
-
-function updateEducation() {
-  const educationValues = Array.from(document.querySelectorAll('#education-form input:checked')).map((cb) => cb.value);
-  const education = document.getElementById("education");
-  education.innerHTML = `<h2>Education.</h2>`;
-  if (educationValues.length == 0) {
-    education.innerHTML += `<p>No item selected.</p>`;
-  }
-  else {
-    educationValues.forEach(key => {
-      if (educationData[key]) {
-        const obj = educationData[key];
-        education.innerHTML += `<div class="education-item">
-                                <h3>${obj.title}</h3> <p><strong>Date:</strong> ${obj.date}</p>
-                                <ul>${obj.skills.map(skill => `<li>${skill}</li>`).join('')}</ul>
-                                </div>`
-      }
-    })
-  }
-}
-
-function updateSkills() {
-  const skillValues = Array.from(document.querySelectorAll('#skill-form input:checked')).map((cb) => cb.value);
-  const skillsSection = document.getElementById("skills");
-  skillsSection.innerHTML = `<h2>Skills</h2>`;
-  if (skillValues.length === 0) {
-    skillsSection.innerHTML += `<p>No skills selected.</p>`;
-  } else {
-    skillValues.forEach((key) => {
-      if (skillData[key]) {
-        skillsSection.innerHTML += `<div class="skill-item">
-                                    <p>${skillData[key]}</p>
-                                  </div>`;
-      }
-    });
-  }
-}
-
-function updateExperience() {
-  const experienceValues = Array.from(document.querySelectorAll('#experience-form input:checked')).map((cb) => cb.value);
-  const experienceSection = document.getElementById("experience");
-
-  experienceSection.innerHTML = `<h2>Experience</h2>`;
-  if (experienceValues.length === 0) {
-    experienceSection.innerHTML += `<p>No experience selected.</p>`;
-  } else {
-    experienceValues.forEach((key) => {
-      if (experienceData[key]) {
-        const experience = experienceData[key];
-        experienceSection.innerHTML += `
-          <div class="experience-item">
-            <h3>${experience.title}</h3>
-            <p><strong>Date:</strong> ${experience.date}</p>
-            <ul>
-              ${experience.details.map(detail => `<li>${detail}</li>`).join('')}
-            </ul>
-          </div>
-        `;
-      }
-    });
-  }
-}
-
-function updateProjects() {
-  const selectedProjectKeys = Array.from(document.querySelectorAll('#projects-form input:checked')).map((cb) => cb.value);
-  const projectsSection = document.getElementById("projects");
-  projectsSection.innerHTML = `<h2>Projects</h2>`;
-  if (selectedProjectKeys.length === 0) {
-    projectsSection.innerHTML += `<p>No projects selected.</p>`;
-  } else {
-    const filteredProjects = selectedProjectKeys.map((key) => projectData[key]);
-    if (filteredProjects.length === 0) {
-      projectsSection.innerHTML += `<p>No projects found for the selected keys.</p>`;
-    } else {
-      filteredProjects.forEach((project) => {
-        projectsSection.innerHTML += `
-          <div class="project-item">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <p><strong>Technologies:</strong> ${project.technologies.join(', ')}</p>
-          </div>
-        `;
-      });
-    }
-  }
-}
-
-function updateContent() {
-  updateEducation()
-  updateSkills()
-  updateExperience();
-  updateProjects();
-}
-
-document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
-  checkbox.addEventListener('change', updateContent);
-});
-
-updateContent();
