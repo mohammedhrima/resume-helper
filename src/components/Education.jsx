@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
-import { ctx } from '../context/data'
-import { educationData } from '../context/script';
+import { ctx } from '../context/ctx'
+import { educationData } from '../context/data';
 
 function Education() {
   const { education, updateEducation } = useContext(ctx)

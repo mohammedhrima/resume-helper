@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { ctx } from '../context/data';
+import { ctx } from '../context/ctx';
 
 function ViewContent() {
    const { education, experience, project, skills } = useContext(ctx);

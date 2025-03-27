@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { educationData, experienceData, projectData, skillsData } from "./script";
+import { educationData, experienceData, projectData, skillsData } from "./data";
 
 export const ctx = createContext();
 

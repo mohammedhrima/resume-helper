@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
-import { ctx } from '../context/data';
-import { experienceData } from '../context/script';
+import { ctx } from '../context/ctx';
+import { experienceData } from '../context/data';
 
 function Experience() {
   const { experience, updateExperience } = useContext(ctx);

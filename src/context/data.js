@@ -1,15 +1,17 @@
 export const educationData = {
   cs: {
-    title: "Computer Science",
-    date: "Jan 2025 | Ben Guerir",
+    title: "Mohammed VI Polytechnic University, 1337 (42 network)",
+    degree: "Computer Science",
+    date: "Mar 2025 | Ben Guerir",
     skills: [
       "Learned algorithms, data structures, and software development principles",
       "Gained hands-on experience through project-based learning inspired by the 42 Network pedagogy"
     ]
   },
   sd: {
-    title: "Software Developer",
-    date: "Jan 2025 | Ben Guerir",
+    title: "Mohammed VI Polytechnic University, 1337 (42 network)",
+    degree: "Software Developer",
+    date: "Mar 2025 | Ben Guerir",
     skills: [
       "Learned algorithms, data structures, and software development principles",
       "Gained hands-on experience through project-based learning inspired by the 42 Network pedagogy"

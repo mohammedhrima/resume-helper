@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
-import { ctx } from '../context/data';
-import { skillsData } from '../context/script';
+import { ctx } from '../context/ctx';
+import { skillsData } from '../context/data';
 
 function Skills() {
   const { skills, updateSkills } = useContext(ctx);
