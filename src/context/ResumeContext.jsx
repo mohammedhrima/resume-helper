@@ -6,14 +6,14 @@ const ResumeContext = createContext(null);
 
 const initialSelection = () => ({
   sections: {
-    summary: false,
+    summary: true,
     experience: true,
     projects: true,
     skills: true,
     education: true,
-    languages: false,
-    certifications: false,
-    hobbies: false,
+    languages: true,
+    certifications: true,
+    hobbies: true,
   },
   experiences: Object.fromEntries(
     data.experiences.map((e) => [

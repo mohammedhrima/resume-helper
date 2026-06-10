@@ -80,10 +80,10 @@ export const experiences = [
         {
           text: "\\textbf{Collaborative Projects with CIH Bank:}",
           items: [
-            "\\textbf{CIH Landing Front} --- Developed the dashboard enabling CIH agents to view, approve, or cancel real estate credit requests.",
-            "\\textbf{CIH Parcours Web} --- Maintained and improved the user credit request flow, guiding clients to input their information to obtain tailored credit offers.",
-            "\\textbf{Cockpit Front} --- Contributed to the platform allowing users to upload credit documents and experts to validate or reject requests based on eligibility.",
-            "\\textbf{CIH Mobile App} --- Designed and implemented the simulation and credit request module, including document upload and expert tracking.",
+            "\\textbf{CIH Landing Front} : Developed the dashboard enabling CIH agents to view, approve, or cancel real estate credit requests.",
+            "\\textbf{CIH Parcours Web} : Maintained and improved the user credit request flow, guiding clients to input their information to obtain tailored credit offers.",
+            "\\textbf{Cockpit Front} : Contributed to the platform allowing users to upload credit documents and experts to validate or reject requests based on eligibility.",
+            "\\textbf{CIH Mobile App} : Designed and implemented the simulation and credit request module, including document upload and expert tracking.",
           ],
         },
       ],
@@ -99,10 +99,10 @@ export const experiences = [
         {
           text: "\\textbf{Projets collaboratifs avec la Banque CIH :}",
           items: [
-            "\\textbf{CIH Landing Front} --- Développement du tableau de bord permettant aux agents CIH de consulter, approuver ou annuler les demandes de crédit immobilier.",
-            "\\textbf{CIH Parcours Web} --- Maintenance et amélioration du parcours de demande de crédit, guidant les clients pour obtenir des offres adaptées.",
-            "\\textbf{Cockpit Front} --- Contribution à la plateforme permettant le dépôt de documents de crédit et leur validation ou rejet par les experts selon l'éligibilité.",
-            "\\textbf{CIH Mobile App} --- Conception et implémentation du module de simulation et de demande de crédit, incluant le dépôt de documents et le suivi par les experts.",
+            "\\textbf{CIH Landing Front} : Développement du tableau de bord permettant aux agents CIH de consulter, approuver ou annuler les demandes de crédit immobilier.",
+            "\\textbf{CIH Parcours Web} : Maintenance et amélioration du parcours de demande de crédit, guidant les clients pour obtenir des offres adaptées.",
+            "\\textbf{Cockpit Front} : Contribution à la plateforme permettant le dépôt de documents de crédit et leur validation ou rejet par les experts selon l'éligibilité.",
+            "\\textbf{CIH Mobile App} : Conception et implémentation du module de simulation et de demande de crédit, incluant le dépôt de documents et le suivi par les experts.",
           ],
         },
       ],
@@ -133,12 +133,10 @@ export const experiences = [
       en: [
         "Designed and implemented multi-threaded trading algorithms in \\textbf{C++}, reducing order execution latency by 30\\% and improving overall system performance.",
         "Optimized the core trading platform code, enhancing stability, scalability, and concurrent process management.",
-        "Developed \\textbf{Bash} scripts to automate client request testing and simulate high-frequency trading scenarios under real conditions.",
       ],
       fr: [
         "Conception et implémentation d'algorithmes de trading multi-thread en \\textbf{C++}, réduisant la latence d'exécution des ordres de 30\\% et améliorant les performances globales du système.",
         "Optimisation du code de la plateforme de trading, améliorant la stabilité, la scalabilité et la gestion des processus concurrents.",
-        "Développement de scripts \\textbf{Bash} pour automatiser les tests de requêtes clients et simuler des scénarios de trading haute fréquence en conditions réelles.",
       ],
     },
   },
@@ -198,7 +196,7 @@ export const experiences = [
   {
     id: "sermp",
     company: "SERMP",
-    defaultSelected: false,
+    defaultSelected: true,
     date: { en: "Nov 2019 -- Apr 2020", fr: "Nov. 2019 -- Avr. 2020" },
     title: { en: "Lathe Operator", fr: "Opérateur sur Tour" },
     highlights: {
@@ -219,8 +217,8 @@ export const projects = [
     urlText: "github.com/mohammedhrima/MediSimpleGPT",
     defaultSelected: true,
     title: {
-      en: "MediSimpleGPT -- Local AI Assistant \\& Web Agent",
-      fr: "MediSimpleGPT -- Assistant IA Local \\& Agent Web",
+      en: "MediSimpleGPT: Local AI Assistant \\& Web Agent",
+      fr: "MediSimpleGPT: Assistant IA Local \\& Agent Web",
     },
     highlights: {
       en: [
@@ -243,8 +241,8 @@ export const projects = [
     urlText: "github.com/mohammedhrima/deep-seek-clone",
     defaultSelected: true,
     title: {
-      en: "DeepSeek AI Clone -- Real-time Chat Architecture",
-      fr: "Clone DeepSeek AI -- Architecture de Chat Temps Réel",
+      en: "DeepSeek AI Clone: Real-time Chat Architecture",
+      fr: "Clone DeepSeek AI: Architecture de Chat Temps Réel",
     },
     highlights: {
       en: [
@@ -265,7 +263,7 @@ export const projects = [
     id: "webserver",
     url: "https://github.com/mohammedhrima/webserver",
     urlText: "github.com/mohammedhrima/webserver",
-    defaultSelected: false,
+    defaultSelected: true,
     title: { en: "HTTP Web Server", fr: "Serveur Web HTTP" },
     highlights: {
       en: [
@@ -284,7 +282,7 @@ export const projects = [
     id: "uralang",
     url: "https://github.com/mohammedhrima/ura-lang/",
     urlText: "github.com/mohammedhrima/ura-lang/",
-    defaultSelected: false,
+    defaultSelected: true,
     title: { en: "Compiler (Ura-lang)", fr: "Compilateur (Ura-lang)" },
     highlights: {
       en: [
@@ -298,10 +296,32 @@ export const projects = [
     },
   },
   {
+    id: "anvil",
+    url: "https://github.com/mohammedhrima/anvil",
+    urlText: "github.com/mohammedhrima/anvil",
+    defaultSelected: true,
+    title: {
+      en: "Anvil: Build \\& Release Tool",
+      fr: "Anvil: Outil de Build \\& Release",
+    },
+    highlights: {
+      en: [
+        "Built a Make-style \\textbf{C++17} developer tool that drives the Ura-lang compiler through one-shot subcommands configured via an \\textbf{anvil.toml} file.",
+        "Implemented a parallel test runner with \\textbf{IR-diff} comparison and a full release pipeline automating builds, packaging, and \\textbf{GitHub} repository synchronization.",
+        "Added a cross-platform dependency installer (brew/apt/pacman/dnf), a \\textbf{Docker}-based Linux dev environment, and LeakSanitizer integration, with a vendored TOML parser and no external dependencies.",
+      ],
+      fr: [
+        "Création d'un outil de développement \\textbf{C++17} de type Make pilotant le compilateur Ura-lang via des sous-commandes configurées dans un fichier \\textbf{anvil.toml}.",
+        "Implémentation d'un lanceur de tests parallèle avec comparaison \\textbf{IR-diff} et d'un pipeline de release automatisant la compilation, l'empaquetage et la synchronisation des dépôts \\textbf{GitHub}.",
+        "Ajout d'un installateur de dépendances multi-plateforme (brew/apt/pacman/dnf), d'un environnement de dev Linux sous \\textbf{Docker} et de l'intégration LeakSanitizer, avec un parseur TOML embarqué et sans dépendances externes.",
+      ],
+    },
+  },
+  {
     id: "raytracer",
     url: "https://github.com/mohammedhrima/raytracer/",
     urlText: "github.com/mohammedhrima/raytracer/",
-    defaultSelected: false,
+    defaultSelected: true,
     title: {
       en: "Ray Tracer (Mini 3D Engine)",
       fr: "Ray Tracer (Mini Moteur 3D)",
@@ -323,7 +343,7 @@ export const projects = [
     id: "urajs",
     url: "https://github.com/mohammedhrima/urajs",
     urlText: "github.com/mohammedhrima/urajs",
-    defaultSelected: false,
+    defaultSelected: true,
     title: {
       en: "Frontend Framework (UraJS)",
       fr: "Framework Frontend (UraJS)",
@@ -343,10 +363,10 @@ export const projects = [
     id: "transcendence",
     url: "",
     urlText: "",
-    defaultSelected: false,
+    defaultSelected: true,
     title: {
-      en: "42 ft\\_transcendence -- Multiplayer Game Project",
-      fr: "42 ft\\_transcendence -- Jeu Multijoueur",
+      en: "42 ft\\_transcendence: Multiplayer Game Project",
+      fr: "42 ft\\_transcendence: Jeu Multijoueur",
     },
     highlights: {
       en: [
@@ -363,7 +383,7 @@ export const projects = [
     id: "dashboard",
     url: "https://github.com/mohammedhrima/dashboard",
     urlText: "github.com/mohammedhrima/dashboard",
-    defaultSelected: false,
+    defaultSelected: true,
     title: { en: "Dashboard", fr: "Tableau de Bord" },
     highlights: {
       en: [
